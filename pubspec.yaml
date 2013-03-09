@@ -1,0 +1,9 @@
+name: option
+version: 0.1.0
+description: >
+  The Option typeclass inspired by Scala's implementation and Haskell's Maybe
+  monad. Option is a composable and more expressive alternative to things that
+  may be null on absence of value.
+author: Joseph Moniz <joseph.moniz@gmail.com>
+dependencies:
+  unittest: 0.4.1
