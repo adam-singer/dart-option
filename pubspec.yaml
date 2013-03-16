@@ -1,10 +1,8 @@
 name: option
-version: 0.2.0
+version: 0.2.1
 homepage: https://github.com/JosephMoniz/dart-option
 description: >
   The Option typeclass inspired by Scala's implementation and Haskell's Maybe
   monad. Option is a composable and more expressive alternative to things that
   may be null on absence of value.
 author: Joseph Moniz <joseph.moniz@gmail.com>
-dependencies:
-  unittest: 0.4.1

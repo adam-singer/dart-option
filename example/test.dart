@@ -1,4 +1,4 @@
-import '../lib/option.dart';
+import 'package:option/option.dart';
 
 main() {
   final some   = new Some(42);
