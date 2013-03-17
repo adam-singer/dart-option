@@ -84,6 +84,28 @@ abstract class Option<T> {
   dynamic orNull();
 
   /**
+   * Returns a `Left` projection of this `Option` type. If this `Option`
+   * type is `Some` the inner value is returned wrapped in a `Left`. If
+   * this `Option` type is `None` the supplied `right` value will be
+   * returned wrapped in a `Right` type.
+   *
+   * @param {dynamic} right    - The right value if this option is empty
+   * @return {Either<dynamic>} - The left projection
+   */
+  Either<dynamic, dynamic> toLeft(dynamic right);
+
+  /**
+   * Returns a `Right` projection of this `Option` type. If this `Option`
+   * type is `Some` the inner value is returned wrapped in a `Right`. If
+   * this `Option` type is `None` the supplied `left` value will be
+   * returned wrapped in a `Left` type.
+   *
+   * @param {dynamic} right    - The left value if this option is empty
+   * @return {Either<dynamic>} - The right projection
+   */
+  Either<dynamic, dynamic> toRight(dynamic left);
+
+  /**
    * Applies the `mapper` to the inner value and wraps the result of
    * the mapper in a new `Option<T>` and returns the new `Option<T>`.
    * If the current `Option` is `None` this function just returns `this`

@@ -73,6 +73,26 @@ class None<T> implements Option<T> {
   }
 
   /**
+   * Returns a `Right` type with the supplied `right`
+   *
+   * @param {dynamic} right    - The right value
+   * @return {Either<dynamic>} - The right projection
+   */
+  Either<dynamic, dynamic> toLeft(dynamic right) {
+    return new Right(right);
+  }
+
+  /**
+   * Returns a `Left` type witht he supplied `left`
+   *
+   * @param {dynamic} left     - The left value
+   * @return {Either<dynamic>} - The left projection
+   */
+  Either<dynamic, dynamic> toRight(dynamic left) {
+    return new Left(left);
+  }
+
+  /**
    * Returns  `this`
    *
    * @param {T(T n)}     - Ignored mapper

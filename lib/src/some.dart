@@ -59,7 +59,7 @@ class Some<T> implements Option<T> {
    * @return {Option<T>}                        - This instance
    */
   Option<T> orElse(dynamic alternative) {
-    return this._inner;
+    return this;
   }
 
   /**
@@ -69,6 +69,26 @@ class Some<T> implements Option<T> {
    */
   dynamic orNull() {
     return this._inner;
+  }
+
+  /**
+   * Returns a `Left` projection of this `Some` type.
+   *
+   * @param {dynamic} right    - The right value to ignore
+   * @return {Either<dynamic>} - The left projection
+   */
+  Either<dynamic, dynamic> toLeft(dynamic right) {
+    return new Left(this._inner);
+  }
+
+  /**
+   * Returns a `Right` projection of this `Some` type.
+   *
+   * @param {dynamic} left     - The left value to ignore
+   * @return {Either<dynamic>} - The left projection
+   */
+  Either<dynamic, dynamic> toRight(dynamic left) {
+    return new Right(this._inner);
   }
 
   /**
