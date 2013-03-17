@@ -1,5 +1,5 @@
 name: option
-version: 0.2.2
+version: 0.2.3
 homepage: https://github.com/JosephMoniz/dart-option
 description: >
   The Option typeclass inspired by Scala's implementation and Haskell's Maybe
@@ -7,4 +7,4 @@ description: >
   may be null on absence of value.
 author: Joseph Moniz <joseph.moniz@gmail.com>
 dependencies:
-  either: 0.1.2
+  either: '>=0.1.0 <0.2.0'
